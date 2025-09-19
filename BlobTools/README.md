@@ -8,16 +8,16 @@ BlobTools/BlobToolKit is a software suite that allows you to identify and isolat
 There are three types of data that can be added to the BlobTools project file for visualization
 
 1. **NCBI blastn hits**  
-   - See: `blastn_blobtools_${PROJECT_NAME}.sh`  
+   - See: [blastn_blobtools.sh](commands/blastn_blobtools.sh)  
    - You could also perform a BLASTX search with the UniProt database and add those hits.  
    - In practice, BLASTN with the ncbi nt database is usually sufficient.
 
-2. **Coverage data**  
+2. **Coverage data**
+   - See: [minimap2_blobtools.sh](commands/minimap2_blobtools.sh)
    - Requires mapping reads back to the assembly (e.g., with minimap2).  
    - Important: adjust the `-ax` option depending on sequencing technology (Illumina, PacBio, ONT).  
-   - Very large files require substantial memory (e.g., 40+ threads).  
-   - See: `minimap2_blobtools_${PROJECT_NAME}.sh`.
-
+   - Very large files require substantial memory (e.g., 40+ threads).
+     
 3. **BUSCO hits** (optional)  
    - BlobTools can also incorporate BUSCO results.  
    - Often skipped, since BLAST results typically provide good taxonomic assignments.
@@ -305,7 +305,9 @@ You are able to interpret the BlobTools results locally. First you must install 
 
 2. Use brew to install XQuartz:
 
-> brew install XQuartz
+```bash
+brew install XQuartz
+```
 
 3. Install Firefox if you don't already have it.
 
@@ -329,7 +331,9 @@ usage: blobtools [<command>] [<args>...] [-h|--help] [--version]
 
 Once you install the software, to use it in the future all you need to do is run:
 
->conda activate blobtoolkit
+```bash
+conda activate blobtoolkit
+```
 
 ---
 
