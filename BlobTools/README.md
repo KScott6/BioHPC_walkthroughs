@@ -177,7 +177,7 @@ This step uses minimap2 to map sequencing reads back to the assembly in order to
 
 Example job script:
 
-````
+```
 # Project variables
 PROJECT_NAME="Pandi1"
 ASSEMBLY_FILE="Pandi1_genomic.fasta"
