@@ -1,16 +1,20 @@
-# BioHPC_walkthroughs
-Guides and scripts, to be used on the Bushley BioHPC server (Cornell)
+# Guides and scripts, to be used on the Bushley BioHPC server (Cornell)
+
+<br>
 
 [BlobTools Guide](/BlobTools/README.md)
 
 - BlobTools/BlobToolKit is a software suite that allows you to identify and isolate contaminent or non-target DNA from your genome assembly. This software integrate taxonomic information, coverage, and basis sequence stats to identify reads that are potentially contamination. All you need is your genome assembly (.fa, .fasta) and the reads that were used to build your genome assembly (.fq, .fastq)
 
+<br>
 
-Phylogenetic trees (single gene, multi-gene, many genes)(in-progress)
+Phylogenetic trees (single gene, multi-gene, many genes)(will upload soon)
 
+<br>
 
-Illumina genome assembly pipeline (in-progress)
+Illumina genome assembly pipeline (will upload soon)
 
+<br>
 
-Funannotate Pipeline (BioHPC version) (in-progress)
+Funannotate Pipeline (BioHPC version) (will upload soon)
 
