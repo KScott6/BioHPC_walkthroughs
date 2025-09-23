@@ -8,7 +8,13 @@
 
 <br>
 
-Phylogenetic trees (single gene, multi-gene, many genes)(will upload soon)
+Phylogenetic tree creation guides
+
+- [Single-gene](/Phylogeny_Guide/single-gene/README.md)
+
+- Multi-gene (will upload soon)
+
+- Phylogenomic (will upload soon)
 
 <br>
 
