@@ -100,7 +100,7 @@ You could also use your own sequence data:
 
 <br>
 
-Note: If you are using your own data, it's very important to include an *outgroup** in your phylogenetic tree.
+Note: If you are using your own data, it's very important to include an *outgroup* in your phylogenetic tree.
 
 An outgroup is a taxon that is known to fall outside the evolutionary group of primary interest (the “ingroup”). Including an outgroup allows the tree to be rooted and helps distinguish ancestral from derived traits. Without an outgroup, a tree is unrooted and only shows relative relatedness.
 
@@ -154,19 +154,19 @@ Once you have curated your fasta headers, you can go ahead and start the sequenc
 
 5. You will see all of your sequences load onto the screen, with each sequence a different row. The different nucleotides are shown in different colors.
 
-![Raw sequences in Mesquite](/single-gene/images/mesquite1.png)
+![Raw sequences in Mesquite](images/mesquite1.png)
 
 6. Now it is time to align the sequences. To align all the sequences, go to the top bar and select “Matrix” → “Align multiple sequences” → [choice of alignment software].  I will select “MAFFT” to align my sequences.  
 
 7. It will ask you if you want to run the alignment on a separate thread – say no.  
 
-![MAFFT option in Mesquite](/single-gene/images/mesquite2.png)
+![MAFFT option in Mesquite](mesquite2.png)
 
 8. If you are running any alignment software in Mesquite for the first time, it will ask you to provide the path to the software you downloaded separately. Find and provide the appropriate path name of the software your downloaded.  
 
 9. After you have run MAFFT (<10 seconds) you will see the sequences are now aligned, but full of gaps.
 
-![Aligned sequences in Mesquite](/single-gene/images/mesquite3.png)
+![Aligned sequences in Mesquite](images/mesquite3.png)
 
 You will see that the different sequences have different lengths – it is important that you trim the sequences to be all the exact same length. If you don’t, you are artificially introducing variation between the reads, and tree-making software will interpret this difference as real differences between the strains rather than mistakes made in the file preparation steps. 
 
@@ -174,11 +174,11 @@ Click to highlight the first character column → press and hold SHIFT → click
 
 With the section to trim off highlighted, go to “Matrix” → "Delete selected Chars or Taxa"
 
-![Trimming sequences in Mesquite](/single-gene/images/mesquite4.png)
+![Trimming sequences in Mesquite](images/mesquite4.png)
 
 Do this for the beginning and the end of the aligned sequences. Now your sequences are both aligned and trimmed. 
 
-![Trimmed sequences in Mesquite](/single-gene/images/mesquite5.png)
+![Trimmed sequences in Mesquite](images/mesquite5.png)
 
 
 Side note:  It's not a problem with this test Fusarium dataset, but you may have alignments where some sequences are terribly aligned and don’t seem to make much sense at all – this could be due to the locus getting mis-labeled in NCBI, in which case you need to toss out the sequence. It could also be due to the sequences being the reverse complement of its sister sequences – in which case you need to change the sequence to the reverse complement and (Highlight sequences in question, then go to “Align” → “Reverse Complement”) then re-align all sequences.  
@@ -295,21 +295,21 @@ If FigTree doesn’t recognize .contree, you can rename it to .tree.
 
 An unrooted tree will appear on your screen. 
 
-![Unrooted tree in FigTree](/single-gene/images/figtree1.png)
+![Unrooted tree in FigTree](images/figtree1.png)
 
 2. You know what the outgroup in this dataset is (*Beauveria bassiana*) and you can manually set it. Click on the branch of the outgroup. Once highlighted, click “Re-Root” and the tree will be rooted on the outgroup.  
 
-![Rooted tree in FigTree](/single-gene/images/figtree2.png)
+![Rooted tree in FigTree](images/figtree2.png)
 
 3. In order to see the bootstrap support values for the tree, check the “Node labels” option and under “Display” select “label” .
 
-![BS support in FigTree](/single-gene/images/figtree3.png)
+![BS support in FigTree](images/figtree3.png)
 
 You can adjust the thickness of the branch lines under “Appearance”. There are many other tree aesthetics options you can play around with in the software, such as tip label and node font size.
 
 ---
 
-And you are finished! You have a *Fusarium** phylogeny made from ITS sequences. 
+And you are finished! You have a *Fusarium* phylogeny made from ITS sequences. 
 
 But...this doesn't look like a great tree, does it? Look at the support values - we have many nodes with quite low bootstrap support. ITS by itself, or any one sequence alone, will not typically result in the most informative tree. 
 
