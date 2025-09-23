@@ -160,7 +160,7 @@ Once you have curated your fasta headers, you can go ahead and start the sequenc
 
 7. It will ask you if you want to run the alignment on a separate thread – say no.  
 
-![MAFFT option in Mesquite](mesquite2.png)
+![MAFFT option in Mesquite](images/mesquite2.png)
 
 8. If you are running any alignment software in Mesquite for the first time, it will ask you to provide the path to the software you downloaded separately. Find and provide the appropriate path name of the software your downloaded.  
 
