@@ -283,7 +283,7 @@ And you are finished! You have a *Fusarium* phylogeny made from ITS sequences.
 
 But...this doesn't look like a great tree, does it? Look at the support values - we have many nodes with quite low bootstrap support. ITS by itself, or any one sequence alone, will not typically result in the most informative tree. 
 
-Maybe it would be better if we also included a more conserved gene into our tree-making process, such as translation elongation factor EF-1 alpha (aka TEF aka TEF1). Check out my walkthrough of making a multi-gene phylogeny (partitioned analysis).
+Maybe it would be better if we also included a more conserved gene into our tree-making process, such as translation elongation factor EF-1 alpha (aka TEF aka TEF1). Check out my walkthrough of making a [multi-gene phylogeny (partitioned analysis)](../multi-gene/README.md).
 
 
 

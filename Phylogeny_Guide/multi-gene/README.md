@@ -217,7 +217,7 @@ Non-parametric bootstrap results written to: \
 
 Your final tree with bootstrap support values is the .contree file. Open this file in FigTree to see your final multigene tree. You should see something like this:
 
-![ARSEF multigene tree](/images/Metarhizium_ITS_TEF1_multigene_tree.png)
+![ARSEF multigene tree](images/Metarhizium_ITS_TEF1_multigene_tree.png)
 
 
 And there you have it - you have a species tree made from evidence from multiple loci. 

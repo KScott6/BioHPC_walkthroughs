@@ -2,9 +2,9 @@
 
 ## Types of Phylogenetic Trees
 
-- A [single-gene tree](/single-gene) is created using one locus (e.g., Beta-tubulin) across multiple organisms or strains.  
+- A [single-gene tree](single-gene/README.md) is created using one locus (e.g., Beta-tubulin) across multiple organisms or strains.  
 
-- A [multi-gene tree](/multi-gene) uses two or more loci (e.g., Beta-tubulin and TEF1) across multiple organisms or strains.
+- A [multi-gene tree](multi-gene/README.md) uses two or more loci (e.g., Beta-tubulin and TEF1) across multiple organisms or strains.
 
 - A `phylogenomic tree` is a special case of multi-gene trees that use many, many loci (often single-copy orthologs, SCOs) extracted from a set of genomes.  
 
