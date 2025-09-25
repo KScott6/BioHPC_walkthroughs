@@ -1,51 +1,6 @@
-# Making Single-Gene, Multi-Gene, and Phylogenomic Trees (for BioHPC)
+# Section 1: Single-Gene Tree
 
-
-## Introduction
-
-### Types of Phylogenetic Trees
-
-- A **single-gene tree** is created using one locus (e.g., Beta-tubulin) across multiple organisms or strains.  
-
-- A **multi-gene tree** uses two or more common loci (e.g., Beta-tubulin and TEF1).
-
-- A **phylogenomic tree** is a special case of multi-gene trees that use many, many loci (often single-copy orthologs, SCOs) found across a set of genomes.  
-
-<br>
-
-### Notes on Creating Trees
-
-- Resolution suffers if all genes are not present for every strain.  
-
-- The final product of different single-gene trees across the same set of strains may conflict, depending on the chosen loci. Different genes are better/worse at resolving taxonomy depending on the taxa in question. 
-
-- ITS (Internal Transcribed Spacer) is the standard go-to for fungal identification/creating trees, but it is by no means perfect. ITS lacks resolution for deeper relationships (e.g., within genera or families) and may give conflicting results between groups. 
-
-- Database sequences labeled as the same region (e.g., “ITS”) may actually differ depending on the primers used. Check your gene alignments to make sure you have the same locus across all strains. 
-
-<br>
-
----
-
-<br>
-
-## Before You Begin
-
-### Software Requirements
-
-Make note of where you download this software. 
-
-- [IQ-TREE](http://www.iqtree.org/) – Tree creation  
-- [Figtree](https://github.com/rambaut/figtree/releases) – Tree visualization  
-- Sequence trace viewers (optional): [4Peaks (Mac)](https://nucleobytes.com/4peaks/index.html) or [Chromas (Windows)](http://technelysium.com.au/wp/chromas/)  
-- [Mesquite](https://www.mesquiteproject.org/Installation.html) – Alignment GUI  
-- [MAFFT](https://mafft.cbrc.jp/alignment/software/) – Alignment  
-
-### Notes on this Walkthrough
-
-For training purposes, this walkthrough focuses on manual sequence acquisition, alignment, and tree construction. However, manual acquisition is slow and prone to human error; for automated NCBI data and metadata retrieval, check out my R script set [aRborist](https://github.com/KScott6/aRborist_walkthrough).
-
-Once you feel like you understand each step of the pipeline, you should try to incorporate command-line gene alignment and trimming software. There are many options available and will definitely speed up your pipeline. I really recommend this. 
+For training purposes, this walkthrough focuses on manual sequence acquisition, alignment, and tree construction. Once you feel like you understand each step of the pipeline, you should try to incorporate command-line gene alignment and trimming software. There are many options available and will definitely speed up your pipeline. I really recommend this. 
 
 Multiple sequence alignment software examples:
 
@@ -57,13 +12,28 @@ Alignment trimming software examples:
 - [TrimAl](https://vicfero.github.io/trimal/)
 - [ClipKit](https://github.com/JLSteenwyk/ClipKIT)
 
+
+The process of manually downloading public data and metadata is slow and prone to human error as well; for automated NCBI data and metadata retrieval check out my R script set [aRborist](https://github.com/KScott6/aRborist_walkthrough).
+
+---
+
+## Before You Begin
+
+### Software Requirements
+
+Make note of where you download these software programs - you will need this information later in the pipeline. 
+
+- [IQ-TREE](http://www.iqtree.org/) – Tree creation  
+- [Figtree](https://github.com/rambaut/figtree/releases) – Tree visualization  
+- Sequence trace viewers (optional): [4Peaks (Mac)](https://nucleobytes.com/4peaks/index.html) or [Chromas (Windows)](http://technelysium.com.au/wp/chromas/)  
+- [Mesquite](https://www.mesquiteproject.org/Installation.html) – Alignment GUI  
+- [MAFFT](https://mafft.cbrc.jp/alignment/software/) – Alignment  
+
 <br>
 
 ---
 
-# Section 1: Single-Gene Tree
-
-## Step 1: Acquire Sequences
+## Step 1: Acquire sequences and set up project folder
 
 Let's make a small Fusarium phylogeny - I have provided a set of example *Fusarium* ITS sequences(and *Beauveria* outgroup) I downloaded from NCBI. I will reference these sequences throughout this walkthrough, but you could use your own sequences or get your own set off NCBI. You can can compare your own results (will be output to /my_results) to my own results found in the /results folder. 
 
