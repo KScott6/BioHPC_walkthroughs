@@ -12,7 +12,7 @@ Phylogenetic tree creation guides
 
 - [Single-gene](/Phylogeny_Guide/single-gene/README.md)
 
-- Multi-gene (will upload soon)
+- [Multi-gene](/Phylogeny_Guide/multi-gene/README.md)
 
 - Phylogenomic (will upload soon)
 
