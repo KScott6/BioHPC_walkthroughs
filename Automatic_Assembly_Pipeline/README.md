@@ -117,12 +117,14 @@ python /workdir/kls345/projects/scripts/step0_addgenomes.py -p /workdir/$USER/pr
 You should see the job IDs and the date of completion for all your samples:
 
    ome qc_trimming_jobID qc_trimming_datecomplete assembly_jobID assembly_datecomplete
+   
 Amcle1              1105               2025-09-24           
 Amroe1              1103               2025-09-24           
 Amgro1              1104               2025-09-24          
 
 
-FYI - your samples will not be considered by the following steps unless they are successfully marked as completed in the pro
+FYI - your samples will not be considered by the following steps unless they are successfully marked as completed in the progress file. 
+
 ---
  
 <br>
@@ -160,6 +162,7 @@ python /workdir/kls345/projects/scripts/step2_assembly.py -p /workdir/$USER/proj
 Same as before, when you view the progress sheet with the step0 --list command, you should see the jobIDs and the date of completion for all your samples. 
 
    ome qc_trimming_jobID qc_trimming_datecomplete assembly_jobID assembly_datecomplete
+   
 Amcle1              1105               2025-09-24           1109            2025-09-26
 Amroe1              1103               2025-09-24           1110            2025-09-26
 Amgro1              1104               2025-09-24           1111            2025-09-26
