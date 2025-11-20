@@ -3,30 +3,42 @@
 These pipeline and associated scripts assumes several things:
 
 - You are running this on the Bushley BioHPC server. 
-- You only have Illumina data (PE150) data that is composed on one forward and one reverse fastq file, per each of your input genomes.
+- You only have Illumina data (PE150) data that is composed of one forward and one reverse fastq file, per each of your input genomes.
 - Your samples were not contaminated.
 - You do not have a massive (>300Mb) genome, or an overly complex genome (e.g. Entomopthorales)
 
-If your data does not meet all of these expectations, you should not try to perform this pipeline. Try looking over my other genome assembly walkthroughs to see which genome assembly pipeline is right for your data. 
+If your data does not meet ALL of these expectations, this is not the pipeline for you. This pipeline is only for the mass production of simple fungal genomes. Try looking over my other genome assembly walkthroughs to see which genome assembly pipeline is right for your data. 
 
 ---
 
 ## Step 0: Setting up your genome database
 
-The software takes short, informative genome names in order to organize your data. 
+First, you need to make a project folder. This project folder will be where all of your analyses will take place. Let's say you want to make a folder called "genome_assembly" in your BioHPC workdir:
 
-For each of your samples, make a short, informative, unique prefix, and rename your input raw sequence data with this "ome" prefix. FOr example, if you had a *Metarhizium robertsii* sample with the strain name "ABC", you can call this sample MetrobABC and rename your input files like this:
-
-MetrobABC_forward.fastq.gz
-MetrobABC_reverse.fastq.gz
-
-It doesn't matter if your files are gzipped or not, but the scripts assume that the naming convention of your input files have the ome code before "_forward" or "_reverse".
-
-First, you need to make a project folder. This project folder will be where all of your analyses will take place. Let's say you want to make a folder called "genome_assembly" in your workdir:
+All you have to do is copy/paste this (don't change a single thing!): 
 
 ```bash
 mkdir -p /workdir/$USER/projects/genome_assembly/
 ```
+
+Then we need to make a folder within your project folder, to store your raw sequence reads. This folder needs to be called "raw_reads".
+
+```bash
+mkdir -p /workdir/$USER/projects/genome_assembly/raw_reads
+```
+
+All of your raw reads (.fastq, .fastq.gz) should be COPIED to this folder (all raw reads should always be backed up in their original form to storage). 
+
+The software depends on short, informative genome names in order to organize your data.
+
+For each of your samples, make a short, informative, unique prefix, and rename your input raw sequence data with this "ome" prefix. Housekeeping tip:  make sure you record which short name corresponds to which original file name. 
+
+For example, if you had a *Metarhizium robertsii* sample with the strain name "ABC", you can call this sample MetrobABC and rename your input files like this:
+
+MetrobABC_forward.fastq.gz
+MetrobABC_reverse.fastq.gz
+
+It doesn't matter if your files are gzipped or not, but the scripts assume that the naming convention of your input files have the ome code before "_forward" or "_reverse". Anything deviating from this pattern will not work.
 
 Then, you need the run the very first of the script in order to create a "progress file" and add your genome names to this file. This file will allow you to easily see where each of your samples are in the genome assembly pipeline. 
 
@@ -36,10 +48,10 @@ If I was adding in my MetrobABC sample, I would run the following command:
 python /workdir/kls345/projects/scripts/step0_addgenomes.py -p /workdir/$USER/projects/genome_assembly/ MetrobABC
 ```
 
-If I had more samples I wanted to add, I could add more ome codes to the command:
+If I had more samples I wanted to add, I could specify the SAME project directory and provide the new sample names:
 
 ```bash
-python /workdir/kls345/projects/scripts/step0_addgenomes.py -p /workdir/$USER/projects/genome_assembly/ MetrobABC MetrobDEF BeabasABC
+python /workdir/kls345/projects/scripts/step0_addgenomes.py -p /workdir/$USER/projects/genome_assembly/ MetrobDEF BeabasABC
 ```
 
 This command will automatically create a "progress file" in your specified project directory. 
@@ -59,8 +71,10 @@ head /workdir/$USER/projects/genome_assembly/progress.csv
 The csv progress file will look something like this:
 
    ome qc_trimming_jobID qc_trimming_datecomplete assembly_jobID assembly_datecomplete
-MetrobABC                                                              
-MetrobDEF                                                              
+MetrobABC                             
+                                 
+MetrobDEF         
+                                                     
 BeabasABC                                        
 
 There will be columns for each stage of the pipeline - both for job ID and the date of completion. 
@@ -118,8 +132,10 @@ You should see the job IDs and the date of completion for all your samples:
 
    ome qc_trimming_jobID qc_trimming_datecomplete assembly_jobID assembly_datecomplete
    
-Amcle1              1105               2025-09-24           
-Amroe1              1103               2025-09-24           
+Amcle1              1105               2025-09-24        
+   
+Amroe1              1103               2025-09-24     
+      
 Amgro1              1104               2025-09-24          
 
 
@@ -164,7 +180,9 @@ Same as before, when you view the progress sheet with the step0 --list command, 
    ome qc_trimming_jobID qc_trimming_datecomplete assembly_jobID assembly_datecomplete
    
 Amcle1              1105               2025-09-24           1109            2025-09-26
+
 Amroe1              1103               2025-09-24           1110            2025-09-26
+
 Amgro1              1104               2025-09-24           1111            2025-09-26
 
 
