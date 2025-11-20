@@ -4,11 +4,13 @@
 
 [BlobTools Guide](/BlobTools/README.md)
 
-- BlobTools/BlobToolKit is a software suite that allows you to identify and isolate contaminent or non-target DNA from your genome assembly. This software integrate taxonomic information, coverage, and basis sequence stats to identify reads that are potentially contamination. All you need is your genome assembly (.fa, .fasta) and the reads that were used to build your genome assembly (.fq, .fastq)
+BlobTools/BlobToolKit is a software suite that allows you to identify and isolate contaminent or non-target DNA from your genome assembly. This software integrate taxonomic information, coverage, and basis sequence stats to identify reads that are potentially contamination. All you need is your genome assembly (.fa, .fasta) and the reads that were used to build your genome assembly (.fq, .fastq). 
 
 <br>
 
 Phylogenetic tree creation guides
+
+I have created several guides that will walk you through how to create phylogenies from different types of input data. 
 
 - [Single-gene](/Phylogeny_Guide/single-gene/README.md)
 
@@ -18,9 +20,7 @@ Phylogenetic tree creation guides
 
 <br>
 
-Illumina genome assembly pipeline (will upload soon)
+[Bulk genome assembly pipeline](/Automatic_Assembly_Pipeline/README.md)
 
-<br>
-
-Funannotate Pipeline (BioHPC version) (will upload soon)
+A software designed to quickly and uniformly proccess raw Illumina data (PE150) into simple fungal genome assemblies.
 
