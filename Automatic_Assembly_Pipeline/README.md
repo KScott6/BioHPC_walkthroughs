@@ -72,6 +72,7 @@ head /workdir/$USER/projects/genome_assembly/progress.csv
 The csv progress file will look something like this:
 
    ome qc_trimming_jobID qc_trimming_datecomplete assembly_jobID assembly_datecomplete
+
 MetrobABC                             
                                  
 MetrobDEF         
