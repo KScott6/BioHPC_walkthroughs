@@ -29,14 +29,15 @@ mkdir -p /workdir/$USER/projects/genome_assembly/raw_reads
 
 All of your raw reads (.fastq, .fastq.gz) should be COPIED to this folder (all raw reads should always be backed up in their original form to storage). 
 
-The software depends on short, informative genome names in order to organize your data.
-
-For each of your samples, make a short, informative, unique prefix, and rename your input raw sequence data with this "ome" prefix. Housekeeping tip:  make sure you record which short name corresponds to which original file name. 
+The software depends on short, informative genome names in order to organize your data. For each of your samples, make a short, informative, unique prefix, and rename your input raw sequence data with this "ome" prefix. Housekeeping tip:  make sure you record which short name corresponds to which original file name. 
 
 For example, if you had a *Metarhizium robertsii* sample with the strain name "ABC", you can call this sample MetrobABC and rename your input files like this:
 
 MetrobABC_forward.fastq.gz
+
 MetrobABC_reverse.fastq.gz
+
+<br> 
 
 It doesn't matter if your files are gzipped or not, but the scripts assume that the naming convention of your input files have the ome code before "_forward" or "_reverse". Anything deviating from this pattern will not work.
 
