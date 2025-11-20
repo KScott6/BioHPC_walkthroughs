@@ -6,7 +6,7 @@
 
 BlobTools/BlobToolKit is a software suite that allows you to identify and isolate contaminent or non-target DNA from your genome assembly. This software integrate taxonomic information, coverage, and basis sequence stats to identify reads that are potentially contamination. All you need is your genome assembly (.fa, .fasta) and the reads that were used to build your genome assembly (.fq, .fastq). 
 
-<br>
+---
 
 Phylogenetic tree creation guides
 
@@ -18,7 +18,8 @@ I have created several guides that will walk you through how to create phylogeni
 
 - Phylogenomic (will upload soon)
 
-<br>
+---
+
 
 [Bulk genome assembly pipeline](/Automatic_Assembly_Pipeline/README.md)
 
