@@ -13,7 +13,7 @@ Alignment trimming software examples:
 - [ClipKit](https://github.com/JLSteenwyk/ClipKIT)
 
 
-The process of manually downloading public data and metadata is slow and prone to human error as well; for automated NCBI data and metadata retrieval check out my R script set [aRborist](https://github.com/KScott6/aRborist_walkthrough).
+The process of manually downloading public data and metadata is slow and prone to human error as well; for automated NCBI data and metadata retrieval check out my R script set [aRborist](https://github.com/KScott6/aRborist/blob/main/README.md).
 
 ---
 
