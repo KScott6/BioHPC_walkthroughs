@@ -16,8 +16,6 @@ I have created several guides that will walk you through how to create phylogeni
 
 - [Multi-gene](/Phylogeny_Guide/multi-gene/README.md)
 
-- Phylogenomic (will upload soon)
-
 ---
 
 
